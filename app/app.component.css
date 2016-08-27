@@ -1,0 +1,367 @@
+#all {
+  min-height: 100%;
+}
+
+.container {
+  width: 86%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 0 40px;
+}
+
+#calculator {
+  background: rgba(0, 41, 85, 0.51);
+  border: 1px solid rgba(172, 209, 234, 0.25);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+#calculator:before,
+#calculator:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 40%;
+  height: 54%;
+  width: 100px;
+  margin-left: -100px;
+  box-shadow: 6px 0px 22px 0px rgba(0, 0, 0, 0.25);
+  clip: rect(0,120px,auto,100px)
+}
+
+#calculator:before {
+  transform: rotate(-10deg);
+  top: 0;
+}
+
+#calculator:after {
+  transform: rotate(10deg);
+  top: 45%;
+}
+
+#calculator .row:after {
+  display: block;
+  content: '';
+  clear: both;
+  font-size: 0;
+}
+
+#calculator .col {
+  float: left;
+}
+
+#calculator > .row > .col {
+  padding: 28px;
+}
+
+#calculator > .row > .col-left {
+  width: 50%;
+}
+
+#calculator > .row > .col-right {
+  width: 50%;
+}
+
+#calculator .accounts-table .header {
+  color: #939393;
+  font-style: italic;
+  font-size: 90%;
+  padding: 0 0 6px;
+}
+
+#calculator .accounts-table {
+  line-height: 16px;
+  margin: -6px 0;
+}
+
+#calculator .accounts-table .row {
+  margin: 0 -10px;
+}
+
+#calculator .accounts-table .col {
+  padding: 6px 10px;
+}
+
+#calculator .accounts-table .row.active .col {
+  color: #00050a;
+  background: #66CAFE;
+}
+
+#calculator .accounts-table .col-name {
+  padding-right: 12px;
+  border-radius: 0 5px 5px 0;
+  max-width: 50%;
+}
+
+#calculator .accounts-table .col-account {
+  width: 80px;
+  max-width: 50%;
+  border-radius: 5px 0 0 5px;
+}
+
+#calculator .accounts-table .account-number {
+  border-bottom: 1px dashed;
+  line-height: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#calculator .accounts-table .row.active .account-number {
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+#calculator .investment-form {
+  padding: 40px 0 12px;
+  margin: 0 10px;
+  position: relative;
+}
+
+#calculator .investment-form .range-holder {
+  margin: 0 -10px;
+}
+
+#calculator .investment-form output[name="popup"] {
+  position: absolute;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f4f4f4+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f4f4f4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%,#f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  padding: 5px 8px;
+  display: block;
+  top: 0;
+  color: #0f0f0f;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 110%;
+}
+
+#calculator .investment-form output[name="popup"]:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #f4f4f4 transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  display: block;
+  content: '';
+}
+
+/** Range styles **/
+#calculator input[name="investment"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent; /* Otherwise white in Chrome */
+  width: 100%;
+  margin: 0;
+}
+
+#calculator input[name="investment"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+#calculator input[name="investment"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+#calculator input[name="investment"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Custom styles */
+/* Special styling for WebKit/Blink */
+#calculator input[name="investment"]::-webkit-slider-thumb {
+  margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+#calculator input[name="investment"]::-webkit-slider-thumb {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid #f2f2f2;
+  box-shadow: inset 1px 1px 7px -1px rgba(0,0,0,0.75); /* Add cool effects to your sliders! */
+  background: #3889F4;
+
+}
+
+#calculator input[name="investment"]::-moz-range-thumb {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid #f2f2f2;
+  box-shadow: inset 1px 1px 7px -1px rgba(0,0,0,0.75); /* Add cool effects to your sliders! */
+  background: #3889F4;
+}
+
+#calculator input[name="investment"]::-ms-thumb {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid #f2f2f2;
+  box-shadow: inset 1px 1px 7px -1px rgba(0,0,0,0.75); /* Add cool effects to your sliders! */
+  background: #3889F4;
+}
+
+/* Track */
+#calculator input[name="investment"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  box-shadow: inset 0 2px 6px #343d48;
+  background: #9faebe;
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+}
+
+#calculator input[name="investment"]:focus::-webkit-slider-runnable-track {
+  background: #dbefff;
+}
+
+#calculator input[name="investment"]::-moz-range-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  box-shadow: inset 0 2px 6px #343d48;
+  background: #9faebe;
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+}
+
+#calculator input[name="investment"]::-ms-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 18px 0;
+  color: transparent;
+}
+#calculator input[name="investment"]::-ms-fill-lower {
+  background: #9faebe;
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+  box-shadow: inset 0 2px 6px #b8d7ff;
+}
+#calculator input[name="investment"]:focus::-ms-fill-upper {
+  background: #dbefff;
+}
+
+#calculator input[name="investment"]::-ms-fill-upper {
+  background: #9faebe;
+  border-radius: 3px;
+  border: 1px solid #dfdfdf;
+  box-shadow: inset 0 2px 6px #343d48;
+}
+#calculator input[name="investment"]:focus::-ms-fill-upper {
+  background: #dbefff;
+}
+
+#calculator .investment-form output[name="fill-upper"] {
+  height: 7px;
+  background: #FFB902;
+  box-shadow: inset 0 2px 6px #ffffff;
+  display: block;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: -11px;
+  position: relative;
+  z-index: 1;
+}
+/** End range styles **/
+
+#calculator .investment-info {
+  margin-bottom: -14px;
+}
+
+#calculator .investment-info .row {
+  padding: 14px 0;
+}
+
+#calculator .investment-info .col {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
+
+#calculator .investment-info .col-label {
+  color: #66CAFE;
+  font-style: italic;
+  width: 100%;
+}
+
+#calculator .investment-info .col-data {
+  font-size: 250%;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 6px;
+}
+
+@media(min-width: 800px) {
+  #calculator:before,
+  #calculator:after {
+    left: 32.5%;
+  }
+
+  #calculator > .row > .col-left {
+    width: 35%;
+  }
+
+  #calculator > .row > .col-right {
+    width: 65%;
+  }
+
+  #calculator .investment-info .col-label {
+    width: 50%;
+    padding-right: 5%;
+  }
+
+  #calculator .investment-info .col-data {
+    width: 50%;
+    text-align: right;
+    padding-top: 0;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  #calculator .accounts-table .col-account {
+    width: 110px;
+  }
+}
+
+@media(max-width: 600px) {
+  #calculator:before,
+  #calculator:after {
+    display: none;
+  }
+
+  #calculator > .row > .col-left {
+    width: 100%;
+  }
+
+  #calculator > .row > .col-right {
+    width: 100%;
+  }
+}

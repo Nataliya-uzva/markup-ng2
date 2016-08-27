@@ -1,3 +1,41 @@
-<h1>
-  {{title}}
-</h1>
+<div id="all">
+  <div class="container">
+    <h2>Если&nbsp;бы на&nbsp;прошлой неделе вы инвестировали в&nbsp;ПАММ-счет успешного управляющего</h2>
+    <div id="calculator">
+      <div class="row">
+        <div class="col col-left">
+          <div class="accounts-table">
+            <div class="header row">
+              <div class="col col-account">№ счета</div>
+              <div class="col col-name">Управляющий</div>
+            </div>
+            <div class="body">
+
+            </div>
+          </div>
+        </div>
+        <div class="col col-right">
+          <form class="investment-form">
+            <output name="popup" for="investment"></output>
+            <div class="range-holder">
+              <input type="range" name="investment" value="1000" min="0" max="10000">
+              <output name="fill-upper"></output>
+            </div>
+          </form>
+
+          <div class="investment-info">
+            <div class="row" data-result="multiplier">
+              <div class="col col-label">Сегодня ваш депозит&nbsp;бы составил</div><!--
+          --><div class="col col-data"></div>
+            </div>
+
+            <div class="row" data-result="perYear">
+              <div class="col col-label">За&nbsp;год при повторении вклада заработали&nbsp;бы</div><!--
+          --><div class="col col-data"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
